@@ -289,9 +289,9 @@
 }
 
 
-\tikzset{wireInput/.style={%
-    /tikz/anchor=east,
-    /tikz/left=0pt of {\getWireCoord{#1}}
+\tikzset{wireInput/.code={%
+    \skipWire{#1}
+    \pgfkeysalso{/tikz/anchor=east, inner sep=0pt, left=0pt of {\getWireCoord{#1}}}
 }}
 
 
